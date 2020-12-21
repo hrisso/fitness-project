@@ -78,8 +78,8 @@ https://res.cloudinary.com/doas1ztbf/image/upload/v1608503581/Priority%20Matrix.
 | Remove results from previous search | M | 3hrs| 0hrs | 0hrs |
 | CSS design for mobile | M | 3hrs| 0hrs | 0hrs |
 | CSS design for desktop | M | 3hrs| 0hrs | 0hrs |
-| Clear search fields after searching | L | 1hr| 0hrs | 0hrs |
-| Total | H | 32hrs| 0hrs | 0hrs |
+| Clear search fields after searching | L | 2hr| 0hrs | 0hrs |
+| Total | H | 30hrs| 0hrs | 0hrs |
 
 ## Code Snippet
 
