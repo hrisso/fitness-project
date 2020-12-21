@@ -9,7 +9,7 @@ const getOptions = async () => {
     const response = await axios.get(muscleUrl)
     // console.log(response.data.results)
     const muscleList = response.data.results
-    console.log(muscleList)
+    // console.log(muscleList)
     muscleOptions(muscleList)
   } catch (error) {
     console.log(error)
@@ -22,7 +22,7 @@ function muscleOptions(muscleList) {
   const select = document.querySelector('#select-muscle')
   return muscleList.forEach((muscle) => {
     const option = document.createElement('option')
-    console.log(muscle.name)
+    // console.log(muscle.name)
     option.value = `${muscle.name}`
     option.textContent = `${muscle.name}`
     select.append(option)
@@ -32,11 +32,15 @@ function muscleOptions(muscleList) {
 
 // Create form event handler
 const form = document.querySelector('#muscle-search')
-// form.addEventListener('submit', function)
+form.addEventListener('submit', getSelection)
 
 
 // Get value selected from dropdown upon submit
-
+function getSelection(e) {
+  e.preventDefault()
+  const option = document.querySelector('#select-muscle').value
+  console.log(option)
+}
 
 
 // API call with dropdown value to retrieve matching exercises & info
