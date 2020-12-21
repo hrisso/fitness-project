@@ -38,12 +38,12 @@ https://wireframe.cc/pro/pp/b9843e3ad404013
 - Using the workout API, allow users to search by muscle dropdown
 - Return top 10 exercises that apply to that muscle
 - Each exercise should include title, image, and description
-- User can also search by exercise name
 
 #### PostMVP  
 
 - Add workout section that allows users to add exercises to their workout
 - Find a second API with links to exercise videos
+- Toggle between search by muscle and search by exercise
 
 ## Project Schedule
 
