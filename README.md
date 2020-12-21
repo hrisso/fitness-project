@@ -1,11 +1,11 @@
 # Project Overview
 
-## Workout Ideas
+## Get Fit
 
 
 ## Project Description
 
-The Workout Ideas site will allow you to search by muscle for exercises for that muscle with pictures and a discription of how to perform that exercise
+The Get Fit site will allow you to search by muscle for exercises for that muscle with pictures and a discription of how to perform that exercise
 
 ## API and Data Sample
 
@@ -76,7 +76,7 @@ https://res.cloudinary.com/doas1ztbf/image/upload/v1608503581/Priority%20Matrix.
 | Filter search results by dropdown entry | H | 3hrs| 0hrs | 0hrs |
 | Filter search results by search box entry | H | 3hrs| 0hrs | 0hrs |
 | Remove results from previous search | M | 3hrs| 0hrs | 0hrs |
-| CSS design for mobile | m | 3hrs| 0hrs | 0hrs |
+| CSS design for mobile | M | 3hrs| 0hrs | 0hrs |
 | CSS design for desktop | M | 3hrs| 0hrs | 0hrs |
 | Clear search fields after searching | L | 1hr| 0hrs | 0hrs |
 | Total | H | 32hrs| 0hrs | 0hrs |
