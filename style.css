@@ -1,9 +1,39 @@
 body {
   text-align: center;
-  /* display: flex; */
+  background-color: #3c91e6;
+}
+
+main {
+  border: solid #342e37;
+  border-radius: 10px;
+  padding: 50px;
+  margin: 100px;
+  background-color: #fafffd;
 }
 
 img {
-  height: 300px;
-  width: auto;
+  max-width: 50%;
+  height: auto;
+  border: solid #342e37;
+  border-radius: 10px;
+}
+
+#select-muscle {
+  padding: 8px;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+#append-exercises {
+  display: flex;
+  justify-content: center;
+  flex-flow: column wrap;
+}
+
+button {
+  text-transform: uppercase;
+  border: 1px solid #342e37;
+  background-color: #9fd356;
+  padding: 8px;
+  border-radius: 5px;
 }
