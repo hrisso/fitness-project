@@ -50,10 +50,10 @@ function getSelection(e) {
 
 // API call with dropdown value to retrieve matching exercises & info
 const getExercises = async (id) => {
-  const exerciseUrl = `https://wger.de/api/v2/exercise/?muscle=${id}&language=2`
+  const exerciseUrl = `https://wger.de/api/v2/exercise/?muscles=${id}&language=2`
   try {
     const response = await axios.get(exerciseUrl)
-    console.log(response.data.results)
+    // console.log(response.data.results)
     const exerciseList = response.data.results
     showExerciseInfo(exerciseList)
   } catch (error) {
@@ -67,8 +67,8 @@ async function getImage(id) {
   const exerciseImageUrl = `https://wger.de/api/v2/exerciseimage/?is_main=True&exercise=${id}`
   try {
     const response = await axios.get(exerciseImageUrl)
-    console.log(response.data.results)
-    const exerciseImage = response.data.results
+    console.log(response.data.results[0].image)
+    return exerciseImage = response.data.results[0].image
   } catch (error) {
     console.log(error)
   }
@@ -76,13 +76,15 @@ async function getImage(id) {
 
 // Create tags dynamically & append to append exercises div
 function showExerciseInfo(data) {
-  data.forEach((exercise) => {
-    console.log(data.id)
+  data.forEach(async (exercise) => {
+    let exerciseImage = await getImage(exercise.id)
+    let realImage = exerciseImage ? exerciseImage : "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.G4HyFZUekuQ8Lilq1DcqTwHaHa%26pid%3DApi&f=1"
+    console.log(realImage)
     const exerciseInfo = `
     <h3>${exercise.name}</h3>
+    <img src=${realImage} alt="exercise" class="exercise"/>
     <p>${exercise.description}</p>
     `
-    // <img src="${exerciseImage}" alt= "exercise" class="exercise"/>
     document.querySelector('#append-exercises').insertAdjacentHTML('beforeend', exerciseInfo)
     })
   }
