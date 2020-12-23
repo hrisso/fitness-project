@@ -72,7 +72,7 @@ button {
   border-radius: 5px;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 745px) {
   main {
     margin: 10px auto;
   }
