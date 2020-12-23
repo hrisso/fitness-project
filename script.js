@@ -1,9 +1,7 @@
 
-
+// Use axios API call to create dynamic dropdown list of muscles
 const muscleUrl = "https://wger.de/api/v2/muscle"
 
-
-// Use axios API call to create dynamic dropdown list of muscles
 const getOptions = async () => {
   try {
     const response = await axios.get(muscleUrl)
@@ -55,6 +53,7 @@ const getExercises = async (id) => {
     const response = await axios.get(exerciseUrl)
     // console.log(response.data.results)
     const exerciseList = response.data.results
+    removeExercises()
     showExerciseInfo(exerciseList)
   } catch (error) {
     console.log(error)

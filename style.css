@@ -8,24 +8,33 @@ main {
   border: solid #342e37;
   border-radius: 10px;
   padding: 50px;
-  margin: 25%;
+  margin: 50px 200px;
   background-color: #fafffd;
 }
 
 header {
   background-image: url("https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1");
   background-size: cover;
+  background-position: center;
   border: solid #342e37;
   border-radius: 10px;
   font-weight: bold;
   font-size: 3em;
   color: #9fd356;
+  text-shadow: 1px 1px 3px #342e37;
 }
 
 footer {
   background-color: #fafffd;
   border: solid #342e37;
   border-radius: 10px;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 2em;
+  color: #9fd356;
+  text-shadow: 1px 1px 3px #342e37;
 }
 
 .footer-img {
@@ -36,7 +45,7 @@ footer {
 }
 
 img {
-  max-width: 50%;
+  max-width: 25%;
   height: auto;
   border: solid #342e37;
   border-radius: 10px;
