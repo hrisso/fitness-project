@@ -67,7 +67,7 @@ async function getImage(id) {
   const exerciseImageUrl = `https://wger.de/api/v2/exerciseimage/?is_main=True&exercise=${id}`
   try {
     const response = await axios.get(exerciseImageUrl)
-    console.log(response.data.results[0].image)
+    // console.log(response.data.results[0].image)
     return exerciseImage = response.data.results[0].image
   } catch (error) {
     console.log(error)
@@ -79,9 +79,9 @@ function showExerciseInfo(data) {
   data.forEach(async (exercise) => {
     let exerciseImage = await getImage(exercise.id)
     let realImage = exerciseImage ? exerciseImage : "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.G4HyFZUekuQ8Lilq1DcqTwHaHa%26pid%3DApi&f=1"
-    console.log(realImage)
+    // console.log(realImage)
     const exerciseInfo = `
-    <h3>${exercise.name}</h3>
+    <h2>${exercise.name}</h2>
     <img src=${realImage} alt="exercise" class="exercise"/>
     <p>${exercise.description}</p>
     `
@@ -93,3 +93,10 @@ function showExerciseInfo(data) {
 
 
 // Remove exercises from last search
+function removeExercises() {
+  const removeExercise = document.querySelector('#append-exercises')
+  // console.log(removeDiv.lastChild)
+  while (removeExercise.lastChild) {
+    removeExercise.removeChild(removeExercise.lastChild)
+  }
+}
