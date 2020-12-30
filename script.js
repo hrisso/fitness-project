@@ -70,6 +70,14 @@ async function getImage(id) {
     return exerciseImage = response.data.results[0].image
   } catch (error) {
     console.log(error)
+    let randImg = [
+      "https://images.unsplash.com/photo-1549060279-7e168fcee0c2?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTR8fHdvcmtvdXR8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTd8fHdvcmtvdXR8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "https://images.unsplash.com/photo-1524002232583-bbe9d9d2eebd?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NzZ8fHdvcmtvdXR8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "https://images.unsplash.com/photo-1516481157630-05bc0aeb8b19?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTAyfHx3b3Jrb3V0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "https://images.unsplash.com/photo-1584827387179-355517d8a5fb?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTQ5fHx3b3Jrb3V0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    ]
+    return exerciseImage = randImg[Math.floor(Math.random()*randImg.length)]
   }
 }
 
@@ -77,11 +85,11 @@ async function getImage(id) {
 function showExerciseInfo(data) {
   data.forEach(async (exercise) => {
     let exerciseImage = await getImage(exercise.id)
-    let realImage = exerciseImage ? exerciseImage : "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.G4HyFZUekuQ8Lilq1DcqTwHaHa%26pid%3DApi&f=1"
+    // let realImage = exerciseImage ? exerciseImage : "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.G4HyFZUekuQ8Lilq1DcqTwHaHa%26pid%3DApi&f=1"
     // console.log(realImage)
     const exerciseInfo = `
     <h2>${exercise.name}</h2>
-    <img src=${realImage} alt="exercise" class="exercise"/>
+    <img src=${exerciseImage} alt="exercise" class="exercise"/>
     <p>${exercise.description}</p>
     `
     document.querySelector('#append-exercises').insertAdjacentHTML('beforeend', exerciseInfo)
