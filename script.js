@@ -63,7 +63,7 @@ async function getImage(id) {
     return exerciseImage = response.data.results[0].image
   } catch (error) {
     console.log(error)
-    let randImg = [
+    const randImg = [
       "https://images.unsplash.com/photo-1549060279-7e168fcee0c2?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTR8fHdvcmtvdXR8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
       "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTd8fHdvcmtvdXR8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
       "https://images.unsplash.com/photo-1524002232583-bbe9d9d2eebd?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NzZ8fHdvcmtvdXR8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
@@ -87,7 +87,6 @@ function showExerciseInfo(data) {
     })
   }
     
-
 
 
 // Remove exercises from last search
