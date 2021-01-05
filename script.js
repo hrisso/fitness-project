@@ -76,16 +76,6 @@ async function getImage(id) {
 }
 
 
-// Get image associated with selected muscle & append to DOM
-function addMuscleImg(muscleData) {
-  const removeMuscle = document.querySelector('.muscle')
-  removeMuscle.removeChild()
-  const muscleImg = `
-  <img src=${muscleData.image_url_main} alt="muscle" class="muscle"/>
-  `
-  document.querySelector('#muscle-search').insertAdjacentHTML('beforebegin', muscleImg)
-}
-
 
 // Create tags dynamically & append to append exercises div
 function showExerciseInfo(data) {
