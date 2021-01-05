@@ -41,6 +41,7 @@ function getSelection(e) {
 }
 
 
+
 // API call with dropdown value to retrieve matching exercises & info
 const getExercises = async (id) => {
   const exerciseUrl = `https://wger.de/api/v2/exercise/?muscles=${id}&language=2`
@@ -73,6 +74,18 @@ async function getImage(id) {
     return exerciseImage = randImg[Math.floor(Math.random()*randImg.length)]
   }
 }
+
+
+// Get image associated with selected muscle & append to DOM
+function addMuscleImg(muscleData) {
+  const removeMuscle = document.querySelector('.muscle')
+  removeMuscle.removeChild()
+  const muscleImg = `
+  <img src=${muscleData.image_url_main} alt="muscle" class="muscle"/>
+  `
+  document.querySelector('#muscle-search').insertAdjacentHTML('beforebegin', muscleImg)
+}
+
 
 // Create tags dynamically & append to append exercises div
 function showExerciseInfo(data) {
